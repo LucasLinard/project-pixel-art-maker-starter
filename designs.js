@@ -7,8 +7,6 @@ inputHeight = $('#input_height');
 inputWidth = $('#input_width');
 // When size is submitted by the user, call makeGrid()
 function makeGrid() {
-    console.log("Color: " + colorPicker.val() + ".\n")
-
     // Select Table
     table = $('#pixel_canvas');
     table.empty();
@@ -23,7 +21,6 @@ function makeGrid() {
         for (column = 0; column < columns; column++) {
             // Create one <td> and add it to the previous <tr>
             td = $("<td> </td>");
-            //td.toggle('td');
             td.click(function() {
                 console.log(colorPicker.val());
                $( this ).css('background-color', colorPicker.val() );
